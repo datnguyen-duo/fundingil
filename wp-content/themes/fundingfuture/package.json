@@ -21,7 +21,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
-    "counterup": "^1.0.2",
+    "countup.js": "^2.4.2",
     "gsap": "^3.11.3",
     "jquery": "^3.6.1",
     "swiper": "^8.4.5"

@@ -1,0 +1,222 @@
+.template-action-center-page-container {
+    .image-with-banner-section {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        background-color: $grey-blue;
+        align-items: flex-end;
+
+        img {
+            @include cropped-img();
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#000, 25%);
+        }
+
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            margin-bottom: max(px-to-vw(110), 30px);
+
+            @media #{$tablet-l} {
+                align-items: center;
+                height: auto;
+            }
+
+            h1 {
+                font-family: $font-medium;
+                font-size: max(px-to-vw(300), 90px);
+                color: #fff;
+                line-height: 0.9;
+                width: 100%;
+                text-align: center;
+
+                @media #{$tablet-s} {
+                    text-align: left;
+                }
+
+                @media #{$tablet-l} {
+                    width: auto;
+                }
+            }
+
+            .banner {
+                border-radius: max(px-to-vw(15), 10px);
+                background-color: $orange;
+                padding: max(px-to-vw(60), 30px);
+                box-sizing: border-box;
+                margin-left: auto;
+                width: 100%;
+
+                @media #{$tablet-l} {
+                    width: max(px-to-vw(430), 330px);
+                }
+
+                .banner-title {
+                    @include title-4();
+                    margin-bottom: max(px-to-vw(15), 10px);
+                }
+
+                .banner-text {
+                    @include small-editor-styles();
+                    @include text-2();
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .action-iframe-section {
+        .action-iframe-content {
+            background-color: $tan;
+            padding-top: max(px-to-vw(160), 60px);
+            padding-bottom: max(px-to-vw(190), 60px);
+
+            h2 {
+                @include title-2();
+                text-align: center;
+                margin-bottom: max(px-to-vw(110), 45px);
+                color: $grey-blue;
+            }
+
+            .iframe-holder {
+                background-color: #fff;
+                border-radius: max(px-to-vw(25), 25px);
+                height: 1800px;
+                overflow: hidden;
+
+                @media only screen and (min-width: 1155px) {
+                    height: 1200px;
+                }
+            }
+        }
+    }
+
+    .join-form-section {
+        background-color: $grey-blue;
+
+        .join-form-section-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: max(px-to-vw(170), 60px);
+            padding-bottom: max(px-to-vw(150), 60px);
+
+            .left {
+                width: 100%;
+                margin-bottom: 45px;
+
+                @media #{$tablet-s} {
+                    width: 50%;
+                    margin-bottom: 0px;
+                }
+
+                h2 {
+                    @include title-2();
+                    font-size: max(px-to-vw(140), 52px);
+                    text-align: center;
+
+                    @media #{$tablet-s} {
+                        text-align: left;
+                    }
+                }
+            }
+
+            .right {
+                width: 100%;
+
+                @media #{$tablet-s} {
+                    width: 50%;
+                }
+
+                .right-content {
+                    @media #{$tablet-s} {
+                        max-width: max(px-to-vw(500), 500px);
+                        margin-left: auto;
+                    }
+
+                    iframe {
+                        width: 100%;
+                        height: 860px;
+                        border-radius: max(px-to-vw(25), 25px);
+                    }
+
+                    form {
+                        display: none;
+
+                        .wpcf7-not-valid-tip {
+                            margin-top: max(px-to-vw(7), 5px);
+                            font-family: $font-regular;
+                            font-size: max(px-to-vw(13), 13px);
+                            color: $yellow;
+                        }
+
+                        .wpcf7-response-output {
+                            color: $yellow;
+                            font-family: $font-regular;
+                            margin: 0;
+                            border: 0;
+                            padding: 0;
+                            font-size: max(px-to-vw(16), 14px);
+                        }
+
+                        .input-holder {
+                            margin-bottom: max(px-to-vw(45), 25px);
+
+                            input {
+                                width: 100%;
+                                background-color: transparent;
+                                padding: 0;
+                                font-size: max(px-to-vw(24), 18px);
+                                padding-bottom: 10px;
+                                border: none;
+                                color: #fff;
+                                border-bottom: 1px solid #fff;
+                                @include transition();
+
+                                &:focus {
+                                    outline: none;
+                                    border-color: $yellow;
+                                    color: $yellow;
+
+                                    &::placeholder {
+                                        opacity: 0;
+                                    }
+                                }
+
+                                &::placeholder {
+                                    font-size: max(px-to-vw(24), 18px);
+                                    color: #fff;
+                                    @include transition(all, 100ms);
+                                }
+                            }
+                        }
+
+                        input[type=submit] {
+                            box-shadow: none;
+                            border: none;
+                            @extend .btn;
+                            margin-top: max(px-to-vw(60), 30px);
+                            width: 100%;
+                            -webkit-appearance: none;
+
+                            @media #{$tablet-s} {
+                                width: max(px-to-vw(300), 285px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

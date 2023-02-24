@@ -1,0 +1,72 @@
+.template-part-share-icons {
+    display: flex;
+    align-items: center;
+
+    .share-text {
+        margin-right: max(#{px-to-vw(27)}, 15px);
+        font-family: $font-2-medium;
+        font-size: max(#{px-to-vw(14)}, 12px);
+        color: $grey-blue;
+        line-height: 1.4em;
+    }
+
+    .share-icons {
+        display: flex;
+        align-items: center;
+
+        .share-icon {
+            margin-left: max(#{px-to-vw(10)}, 10px);
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &.twitter-share-icon {
+                svg {
+                    width: px-to-vw(15);
+                    min-width: 15px;
+                }
+            }
+
+            &.linkedin-share-icon {
+                svg {
+                    width: px-to-vw(15);
+                    min-width: 15px;
+                }
+            }
+
+            &.email-share-icon {
+                svg {
+                    width: px-to-vw(18);
+                    min-width: 18px;
+                }
+            }
+
+            &.facebook-share-icon {
+                svg {
+                    width: px-to-vw(9);
+                    min-width: 9px;
+                }
+            }
+
+            a {
+                @include transition();
+                width: max(#{px-to-vw(35)}, 35px);
+                height: max(#{px-to-vw(35)}, 35px);
+                border-radius: max(#{px-to-vw(35)}, 35px);
+                background-color: $orange;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background-color: $grey-blue;
+                }
+
+                svg {
+                    height: auto;
+                }
+            }
+        }
+    }
+}

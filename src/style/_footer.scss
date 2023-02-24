@@ -1,0 +1,157 @@
+#site-footer {
+    .footer-content {
+        padding-top: max(px-to-vw(70), 40px);
+        padding-bottom: max(px-to-vw(70), 40px);
+
+        .top-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: max(px-to-vw(55), 40px);
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+            .left {
+                width: 100%;
+                margin-bottom: 40px;
+
+                @media #{$tablet-l} {
+                    width: auto;
+                    margin-bottom: 0px;
+                }
+
+                .logo-holder {
+                    margin-bottom: max(px-to-vw(35), 20px);
+                    display: inline-block;
+
+                    img {
+                        width: max(px-to-vw(115), 115px);
+                    }
+                }
+
+                p {
+                    color: $grey-blue;
+                    font-family: $font-medium;
+                    font-size: max(px-to-vw(34), 24px);
+
+                    @media #{$tablet-l} {
+                        max-width: 60%;
+                    }
+
+                    @media #{$laptop-s} {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .right {
+                width: 100%;
+
+                @media #{$tablet-l} {
+                    width: auto;
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        margin-right: 45px;
+                        margin-bottom: 35px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                            width: 100%;
+                        }
+
+                        @media #{$tablet-s} {
+                            margin-bottom: 0;
+
+                            &:last-child {
+                                width: auto;
+                            }
+                        }
+
+                        @media #{$tablet-l} {
+                            margin-right: px-to-vw(80);
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        a {
+                            font-family: $font-medium;
+                            font-size: max(px-to-vw(24), 18px);
+                            color: $grey-blue;
+                            margin-bottom: 18px;
+                            display: inline-block;
+                            @include transition(all, 200ms);
+
+                            &:hover {
+                                color: $orange;
+                            }
+                        }
+
+                        ul {
+                            display: block;
+
+                            li {
+                                margin-bottom: 10px;
+
+                                a {
+                                    font-family: $font-2-book;
+                                    font-size: max(px-to-vw(16), 14px);
+                                    color: $grey-blue;
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom-content {
+            padding-top: max(px-to-vw(55), 40px);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            p, a {
+                width: 100%;
+                font-family: $font-2-book;
+                font-size: max(px-to-vw(16), 14px);
+                color: $grey-blue;
+                display: block;
+
+                @media #{$tablet-s} {
+                    width: auto;
+                }
+
+                &.twitter-cta {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            a {
+                margin-bottom: 20px;
+                cursor: pointer;
+                @include transition(all, 200ms);
+
+                &:hover {
+                    color: $orange;
+                }
+
+                @media #{$tablet-s} {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

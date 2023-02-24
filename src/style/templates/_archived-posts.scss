@@ -1,0 +1,146 @@
+.template-archived-posts-page-container {
+    .content {
+        padding-top: max(px-to-vw(190), 140px);
+        background-color: $orange;
+
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: max(px-to-vw(52), 10px);
+            justify-content: center;
+
+            @media #{$tablet-s} {
+                justify-content: space-between;
+            }
+
+            h1 {
+                @include title-2();
+                width: 100%;
+                margin-bottom: 74px;
+                text-align: center;
+
+                @media #{$tablet-s} {
+                    text-align: left;
+                    width: auto;
+                    margin-bottom: 0;
+                }
+            }
+
+            .box-wrap {
+                background-color: $grey-blue;
+                padding: max(px-to-vw(37), 30px) max(px-to-vw(55), 30px);
+                box-sizing: border-box;
+                border-radius: max(px-to-vw(15), 10px);
+
+                @media #{$tablet-s} {
+                    max-width: max(px-to-vw(480), 350px);
+                }
+
+                h2 {
+                    @include text-2();
+                    color: #fff;
+                    font-family: $font-medium;
+                    margin-bottom: max(px-to-vw(15), 10px);
+                }
+
+                p {
+                    @include small-editor-styles();
+                    @include text-1();
+                    color: #fff;
+                }
+            }
+        }
+
+        .posts-wrap {
+            margin-top: max(px-to-vw(128), 86px);
+            padding-bottom: max(px-to-vw(135), 90px);
+
+            .no-results {
+                box-sizing: border-box;
+                padding: 0 px-to-vw(17) max(#{px-to-vw(50)}, 35px) px-to-vw(17);
+                text-align: center;
+                width: 100%;
+
+                @media #{$tablet-s} {
+                    text-align: left
+                }
+
+                h2 {
+                    @include title-4();
+                    font-family: $font-medium;
+                }
+            }
+
+            .posts-holder {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                @include transition();
+
+                @media #{$tablet-s} {
+                    width: calc(100% + px-to-vw(34));
+                    margin-left: px-to-vw(-17);
+                }
+
+                &.loading {
+                    opacity: 0;
+                }
+
+                .post-holder {
+                    width: 100%;
+                    box-sizing: border-box;
+                    margin-bottom: max(px-to-vw(34), 20px);
+
+                    @media #{$tablet-s} {
+                        padding: 0 max(px-to-vw(17), 10px);
+                        width: 50%;
+                    }
+
+                    @media #{$laptop-s} {
+                        width: 33.33333%;
+                    }
+
+                    .template-part-resource {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .banner-holder {
+            padding-bottom: max(px-to-vw(50), 30px);
+
+            .banner {
+                @include transition();
+                @include title-4();
+                color: $grey-blue;
+                background-color: #fff;
+                padding: max(px-to-vw(50), 25px) max(px-to-vw(60), 20px);
+                border-radius: max(px-to-vw(15), 10px);
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    background-color: $yellow;
+
+                    .swiper-btn {
+                        background-color: #fff;
+
+                        svg {
+                            path,
+                            line {
+                                stroke: $grey-blue;
+                            }
+                        }
+                    }
+                }
+
+                .swiper-btn {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

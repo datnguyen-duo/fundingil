@@ -1,0 +1,22 @@
+.default-page-container {
+    .hero-section {
+        padding-top: max(#{px-to-vw(250)}, 150px);
+        padding-bottom: max(#{px-to-vw(100)}, 40px);
+        background-color: $orange;
+
+        h1 {
+            max-width: max(#{px-to-vw(1128)}, 900px);
+            margin: auto;
+            @include title-3();
+        }
+    }
+
+    .editor-section {
+        padding: max(#{px-to-vw(100)}, 40px) 0 max(#{px-to-vw(143)}, 55px);
+
+        .section-content {
+            max-width: max(#{px-to-vw(1128)}, 900px);
+            margin: auto;
+        }
+    }
+}

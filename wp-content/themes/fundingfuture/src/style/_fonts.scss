@@ -1,0 +1,17 @@
+@mixin include-font($family: arial, $weight: normal, $style: normal) {
+    $font-path: "../fonts/";
+
+    @font-face {
+        font-family: $family;
+        src: url('#{$font-path+$family}.woff2') format('woff2');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+$fonts: 'founders-grotesk-regular', 'founders-grotesk-medium', 'gotham-medium', 'gotham-book';
+
+@each $font in $fonts {
+    @include include-font(#{$font});
+}

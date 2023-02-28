@@ -38,7 +38,9 @@ $hero_s = get_field('hero_section'); ?>
                     <div class="content-wrap">
                         <div class="block-hero">
                             <?= wp_get_attachment_image($block['image']['id'],'large') ?>
-                            <h2 class="block-title fade-in-animation"><?= $block['title'] ?></h2>
+                            <?php if ($block['title']):  ?>
+                                <h2 class="block-title fade-in-animation"><?= $block['title'] ?></h2>
+                            <?php endif; ?>
                         </div>
 
                         <div class="block-info">

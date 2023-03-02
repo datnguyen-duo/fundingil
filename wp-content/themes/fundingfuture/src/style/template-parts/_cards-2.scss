@@ -1,174 +1,174 @@
 .template-part-cards-2 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: calc(100% + #{px-to-vw(34)});
-    margin-left: px-to-vw(-17);
-    margin-bottom: min(#{px-to-vw(-34)}, -10px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: calc(100% + #{px-to-vw(34)});
+  margin-left: px-to-vw(-17);
+  margin-bottom: min(#{px-to-vw(-34)}, -10px);
 
-    &.cards-1 {
-        .card-holder {
-            width: 100%;
-        }
-    }
-
-    &.cards-2 {
-        .card-holder {
-            width: 100%;
-
-            @media #{$tablet-s} {
-                width: 50%;
-            }
-        }
-    }
-
-    &.cards-3 {
-        .card-holder {
-            width: 100%;
-
-            @media #{$tablet-s} {
-                width: 50%;
-            }
-
-            @media #{$laptop-s} {
-                width: 33.333%;
-            }
-        }
-    }
-
-    &:not(.cards-1):not(.cards-2):not(.cards-3) {
-        .card-holder {
-            width: 100%;
-
-            @media #{$tablet-s} {
-                width: 50%;
-            }
-
-            @media #{$laptop-s} {
-                width: 25%;
-            }
-        }
-    }
-
+  &.cards-1 {
     .card-holder {
-        padding: 0 px-to-vw(17);
-        box-sizing: border-box;
-        margin-bottom: max(#{px-to-vw(34)}, 10px);
-        z-index: 2;
-
-        .card {
-            position: relative;
-
-            &:hover,
-            &.active {
-                .card-header {
-                    background-color: $yellow;
-
-                    .swiper-btn {
-                        background-color: #fff;
-
-                        svg {
-                            path,
-                            line {
-                                stroke: $grey-blue;
-                            }
-                        }
-                    }
-                }
-            }
-
-            &.active {
-                .swiper-btn {
-                    transform: rotate(180deg);
-                }
-
-                .card-hidden-content {
-                    .card-description {
-                        opacity: 1;
-                    }
-                }
-            }
-
-            .card-header {
-                @include transition();
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                border-radius: max(#{px-to-vw(15)}, 10px);
-                padding: 20px 25px;
-                cursor: pointer;
-                position: relative;
-                background-color: #fff;
-                box-sizing: border-box;
-
-                @media #{$tablet-s} {
-                    padding: max(#{px-to-vw(32)}, 18px);
-                }
-
-                .card-title {
-                    font-family: $font-medium;
-                    color: $grey-blue;
-                    font-size: 18px;
-                    display: flex;
-                    align-items: center;
-                    position: relative;
-                    z-index: 2;
-
-                    @media #{$tablet-s} {
-                        font-size: max(#{px-to-vw(24)}, 16px);
-                    }
-
-                    img {
-                        margin-right: max(#{px-to-vw(13)}, 12px);
-                        width: px-to-vw(32);
-                        min-width: 32px;
-                        height: auto;
-                        max-height: max(#{px-to-vw(25)}, 25px);
-                    }
-                }
-
-                .swiper-btn {
-                    position: relative;
-                    z-index: 2;
-
-                    svg {
-                        transform: rotate(90deg);
-                    }
-                }
-            }
-
-            .card-hidden-content {
-                width: 100%;
-                z-index: 0;
-                display: none;
-                position: relative;
-                left: 0;
-                box-sizing: border-box;
-                background-color: $yellow;
-                padding: 20px 25px;
-                padding-top: 0;
-                border-radius: max(#{px-to-vw(15)}, 10px);
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-                transform: translateY(-10px);
-
-                @media #{$tablet-s} {
-                    transform: translateY(px-to-vw(-20));
-                    position: absolute;
-                    padding: max(#{px-to-vw(32)}, 18px);
-                    padding-top: 0;
-                }
-
-                .card-description {
-                    @include small-editor-styles();
-                    @include transition(all, 400ms, ease, 0s);
-                    opacity: 0;
-                    font-family: $font-2-book;
-                    color: $grey-blue;
-                    font-size: max(#{px-to-vw(16)}, 14px);
-                    line-height: 1.3em;
-                }
-            }
-        }
+      width: 100%;
     }
+  }
+
+  &.cards-2 {
+    .card-holder {
+      width: 100%;
+
+      @media #{$tablet-s} {
+        width: 50%;
+      }
+    }
+  }
+
+  &.cards-3 {
+    .card-holder {
+      width: 100%;
+
+      @media #{$tablet-s} {
+        width: 50%;
+      }
+
+      @media #{$laptop-s} {
+        width: 33.333%;
+      }
+    }
+  }
+
+  &:not(.cards-1):not(.cards-2):not(.cards-3) {
+    .card-holder {
+      width: 100%;
+
+      @media #{$tablet-s} {
+        width: 50%;
+      }
+
+      @media #{$laptop-s} {
+        width: calc(100% / 3);
+      }
+    }
+  }
+
+  .card-holder {
+    padding: 0 px-to-vw(17);
+    box-sizing: border-box;
+    margin-bottom: max(#{px-to-vw(34)}, 10px);
+    z-index: 2;
+
+    .card {
+      position: relative;
+
+      &:hover,
+      &.active {
+        .card-header {
+          background-color: $yellow;
+
+          .swiper-btn {
+            background-color: #fff;
+
+            svg {
+              path,
+              line {
+                stroke: $grey-blue;
+              }
+            }
+          }
+        }
+      }
+
+      &.active {
+        .swiper-btn {
+          transform: rotate(180deg);
+        }
+
+        .card-hidden-content {
+          .card-description {
+            opacity: 1;
+          }
+        }
+      }
+
+      .card-header {
+        @include transition();
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: max(#{px-to-vw(15)}, 10px);
+        padding: 20px 25px;
+        cursor: pointer;
+        position: relative;
+        background-color: #fff;
+        box-sizing: border-box;
+
+        @media #{$tablet-s} {
+          padding: max(#{px-to-vw(32)}, 18px);
+        }
+
+        .card-title {
+          font-family: $font-medium;
+          color: $grey-blue;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          position: relative;
+          z-index: 2;
+
+          @media #{$tablet-s} {
+            font-size: max(#{px-to-vw(24)}, 16px);
+          }
+
+          img {
+            margin-right: max(#{px-to-vw(13)}, 12px);
+            width: px-to-vw(32);
+            min-width: 32px;
+            height: auto;
+            max-height: max(#{px-to-vw(25)}, 25px);
+          }
+        }
+
+        .swiper-btn {
+          position: relative;
+          z-index: 2;
+
+          svg {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      .card-hidden-content {
+        width: 100%;
+        z-index: 0;
+        display: none;
+        position: relative;
+        left: 0;
+        box-sizing: border-box;
+        background-color: $yellow;
+        padding: 20px 25px;
+        padding-top: 0;
+        border-radius: max(#{px-to-vw(15)}, 10px);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        transform: translateY(-10px);
+
+        @media #{$tablet-s} {
+          transform: translateY(px-to-vw(-20));
+          position: absolute;
+          padding: max(#{px-to-vw(32)}, 18px);
+          padding-top: 0;
+        }
+
+        .card-description {
+          @include small-editor-styles();
+          @include transition(all, 400ms, ease, 0s);
+          opacity: 0;
+          font-family: $font-2-book;
+          color: $grey-blue;
+          font-size: max(#{px-to-vw(16)}, 14px);
+          line-height: 1.3em;
+        }
+      }
+    }
+  }
 }

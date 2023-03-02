@@ -202,11 +202,11 @@
                 },
                 {
                     "key": "field_63f899ec850f2",
-                    "label": "Iframe html",
+                    "label": "iFrame HTML",
                     "name": "iframe_html",
                     "aria-label": "",
                     "type": "textarea",
-                    "instructions": "Add here html and script code for dashboard. Parent element(div) must have class \"tableauPlaceholder\"",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -380,5 +380,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677236751
+    "modified": 1677717493
 }

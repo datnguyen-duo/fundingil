@@ -241,8 +241,8 @@
                         "id": ""
                     },
                     "choices": {
-                        "theme-1": "Grey blue bg \/ white text",
-                        "theme-2": "Light blue bg \/ grey blue text"
+                        "theme-1": "Blue Background \/ White Text",
+                        "theme-2": "Light-Blue Background \/ Blue Text"
                     },
                     "default_value": "theme-1",
                     "return_format": "value",
@@ -994,5 +994,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1677192641
+    "modified": 1678388876
 }

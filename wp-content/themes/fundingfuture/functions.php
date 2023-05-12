@@ -34,7 +34,7 @@ endif;
 add_action( 'after_setup_theme', 'site_setup' );
 
 function site_scripts() {
-    wp_enqueue_style('site-style', get_theme_file_uri('/build/index.css'));
+    wp_enqueue_style('site-style', get_theme_file_uri('/build/index.css'), array(), '1.0' );
     wp_enqueue_script('main-js-file', get_theme_file_uri('/build/index.js'), array(), '1.0', true);
     wp_localize_script('main-js-file','site_data',array(
         'site_url' => site_url(),

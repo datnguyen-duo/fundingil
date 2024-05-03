@@ -706,7 +706,7 @@ form.wpcf7-form {
   }
 
   img {
-    width: 100%;
+    width: auto;
     border-radius: max(#{px-to-vw(40)}, 20px);
   }
 
@@ -720,6 +720,47 @@ form.wpcf7-form {
       @include title-4();
       color: $grey-blue;
       margin-bottom: 0;
+    }
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    &-columns-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &-columns-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &-columns-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &-columns-5 {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    &-columns-6 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    &-columns-7 {
+      grid-template-columns: repeat(7, 1fr);
+    }
+    &-columns-8 {
+      grid-template-columns: repeat(8, 1fr);
+    }
+    &-columns-9 {
+      grid-template-columns: repeat(9, 1fr);
+    }
+    &-columns-10 {
+      grid-template-columns: repeat(10, 1fr);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }

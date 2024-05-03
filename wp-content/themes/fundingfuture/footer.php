@@ -23,14 +23,14 @@
             </div>
         </div>
         <div class="bottom-content">
-            <?php $twitter = get_field('twitter', 'option');
-            if( $twitter ): ?>
-                <a href="<?= $twitter ?>" target="_blank" class="twitter-cta">
-                    Follow us on Twitter
-                    <img src="<?= get_template_directory_uri() . '/src/images/twitter-footer.svg' ?>" alt="">
-                </a>
-            <?php endif; ?>
-
+            <?php $social_links = get_field('social_links', 'option');
+            if( $social_links ): 
+            ?><p>Follow Us: </p><?php
+                foreach( $social_links as $link ): ?>
+                    <a href="<?= $link['link'] ?>" target="_blank">
+                        <img src="<?= $link['icon']['url'] ?>" alt="social-icon">
+                    </a>
+            <?php endforeach; endif; ?>
             <p>
                 © <?= date("Y") ?> Funding Illinois’ Future. All Rights Reserved.
             </p>
